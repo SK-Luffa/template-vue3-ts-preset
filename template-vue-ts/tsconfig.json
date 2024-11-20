@@ -1,0 +1,7 @@
+{
+  "files": [], // 仅包含要编译的文件列表，一般为空
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

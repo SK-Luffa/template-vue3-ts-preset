@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",                 // 输出为最新的 ECMAScript 标准
+      "module": "ESNext",                 // 设置模块格式为 ES Module
+      "moduleResolution": "Node",         // Node.js 模块解析方式
+      "esModuleInterop": true,            // 允许 CommonJS 与 ES Module 的互操作
+      "strict": true,                     // 启用所有严格类型检查选项
+      "outDir": "./dist",                 // 编译输出目录
+      "skipLibCheck": true,               // 跳过库文件类型检查
+      "resolveJsonModule": true           // 允许导入 JSON 模块
+    },
+    "include": [
+      "src/**/*.ts"                       // 包含 src 目录下所有的 ts 文件
+    ]
+  }
