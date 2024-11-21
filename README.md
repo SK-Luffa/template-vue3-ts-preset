@@ -1,3 +1,5 @@
+npm create template-vue3-ts-preset
+
 # 基于vite官方模板“template-vue-ts” 集成vue-router、Pinia、axios 等常用第三方插件
 
 该项目创建新的新的vue项目时，无需要手动安装 vue-router、Pinia、axios 等常用第三方插件 以及编写对应的代码和文件，通过脚手架将这些步骤集成起来  从而简化创建新的vue项目的步骤。旨在将重点放到业务开发中，以提节省创建时的成本

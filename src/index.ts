@@ -33,7 +33,7 @@ async function init() { //初始化函数
         name: "vite-Preset",
         message: green('Entry Name:'),
         initial: 'vite-Preset',
-        onState: (state) => {
+        onState: (state:any) => {
 
             finalName = formatTargetDir(state.value) || 'vite-Preset'
         }
@@ -73,7 +73,7 @@ async function init() { //初始化函数
             copy(path.join(templateDir, file), targetPath)
         }
     }
- 
+
     const files = fs.readdirSync(templateDir)
     for (const file of files.filter((f) => f !== 'package.json')) {
         write(file)
@@ -86,6 +86,10 @@ async function init() { //初始化函数
     pkg.name = finalName//设置构建项目的 package的项目名称为我们输入的名称
 
     write('package.json', JSON.stringify(pkg, null, 2) + '\n')
+
+    console.log( green("success!"))
+    console.log( yellow("cd ")+green(finalName))
+    console.log( yellow("pnpm i"))
 
 
 

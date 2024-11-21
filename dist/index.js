@@ -35,7 +35,7 @@ async function init() {
     fileURLToPath(import.meta.url), '../..', `template-${template}`);
     const write = (file, content) => {
         const targetPath = path.join(root, renameFiles[file] ?? file);
-        if (content) {
+        if (content) { //判断是否是文件 如果是就复制并拷贝文件//如果不是就调用copy方法
             fs.writeFileSync(targetPath, content);
         }
         else {
@@ -50,6 +50,9 @@ async function init() {
     fs.readFileSync(path.join(templateDir, `package.json`), 'utf-8'));
     pkg.name = finalName; //设置构建项目的 package的项目名称为我们输入的名称
     write('package.json', JSON.stringify(pkg, null, 2) + '\n');
+    console.log(green("success!"));
+    console.log(yellow("cd ") + green(finalName));
+    console.log(yellow("pnpm i"));
 }
 function copy(src, dest) {
     const stat = fs.statSync(src);

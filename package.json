@@ -1,15 +1,23 @@
 {
-  "name": "template-vue3-ts-preset",
-  "version": "1.0.0",
-  "description": "",
+  "name": "create-template-vue3-ts-preset",
+  "version": "0.0.4",
+  "description": "Integrate vue-router, pinia, and axios based on the official template-vue-ts",
   "main": "index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SK-Luffa/template-vue3-ts-preset"
+  },
+  "bin": {
+    "create-template-vue3-ts-preset":"index.js"
+  },
   "scripts": {
+  "build":"tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["cli","vue3","preset","ts","typescript"],
+  "author": "SK-Luffa",
+  "license": "MIT",
   "dependencies": {
     "picocolors": "^1.1.1",
     "prompts": "^2.4.2"
